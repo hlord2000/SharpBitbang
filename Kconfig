@@ -1,0 +1,17 @@
+source "Kconfig.zephyr"
+
+menu "Sharp LS0XXB7 Display Options"
+
+choice
+    prompt "Display Mode"
+    default SHARP_LS0XXB7_DISPLAY_MODE_COLOR
+
+config SHARP_LS0XXB7_DISPLAY_MODE_COLOR
+    bool "Color (6-bit, 2-bit per R/G/B). Currently internally represented as a 16-bit RGB565 value in the internal buffer to enable use with LGVL."
+
+config SHARP_LS0XXB7_DISPLAY_MODE_MONOCHROME
+    bool "Monochrome (1-bit). If black/white is all you need, this mode saves RAM by keeping only one bit per pixel in the buffer."
+
+endchoice
+
+endmenu

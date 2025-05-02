@@ -48,19 +48,16 @@ properties:
   vb-gpios:
     type: phandle-array
     required: true
-    description: |
-      Black signal voltage for LCD, also connected to VCOM in this implementation
+    description: VB black signal voltage for LCD, also connected to VCOM.
   va-gpios:
     type: phandle-array
     required: true
-    description: |
-      White signal voltage for LCD
+    description: VA, white signal voltage for LCD.
   vcom-freq:
     type: int
-    required: true
+    default: 30
     enum:
       - 30
       - 60
     description: |
       Frequency of VCOM in Hertz
-
